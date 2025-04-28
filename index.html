@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Quinta - Eventos y Hospedaje</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <link rel="stylesheet" href="css/stylehome.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>La Quinta</h1>
+                <p>Eventos & Hospedaje</p>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#reserva" class="nav-link">Reservas</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="login.html" class="btn gestion-btn">Gestión</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>El lugar ideal para tu evento</h2>
+                <p>Comodidad, tranquilidad y naturaleza en un mismo lugar</p>
+                <a href="#reserva" class="btn cta-btn">Reservar ahora</a>
+            </div>
+        </div>
+        <a href="#servicios" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="section servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Todo lo que necesitas para tu evento especial</p>
+            
+                <div class="servicios-grid">
+                    <div class="servicio-card">
+                        <div class="servicio-icon">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                        <h3>Salón de Eventos</h3>
+                        <p>Amplio espacio para organizar tu fiesta con capacidad para 100 personas.</p>
+                    </div>
+                    
+                    <div class="servicio-card">
+                        <div class="servicio-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Catering</h3>
+                        <p>Todo lo necesario para que sirvas a tus comensales.</p>
+                    </div>
+                    
+                    <div class="servicio-card">
+                        <div class="servicio-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h3>Áreas Verdes</h3>
+                        <p>Hermosos jardines y espacios al aire libre para disfrutar de la naturaleza.</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section id="galeria" class="section galeria">
+        <div class="container">
+            <h2 class="section-title">Nuestro Espacio</h2>
+            <p class="section-subtitle">Conoce nuestras instalaciones</p>
+            
+            <div class="gallery-container">
+                <div class="main-image">
+                    <img id="mainGalleryImage" src="images/Quinta 1.jpg" alt="La Quinta">
+                    <div class="image-loader"></div>
+                </div>
+                
+                <div class="thumbnail-container">
+                    <div class="thumbnails">
+                        <img src="images/Quinta 1.jpg" alt="Imagen 1" class="thumbnail active" data-full="images/Quinta 1.jpg">
+                        <img src="images/Quinta 2.jpg" alt="Imagen 2" class="thumbnail" data-full="images/Quinta 2.jpg">
+                        <img src="images/Quinta 3.jpg" alt="Imagen 3" class="thumbnail" data-full="images/Quinta 3.jpg">
+                        <img src="images/Quinta 4.jpg" alt="Imagen 4" class="thumbnail" data-full="images/Quinta 4.jpg">
+                        <img src="images/Quinta 5.jpg" alt="Imagen 5" class="thumbnail" data-full="images/Quinta 5.jpg">
+                        <img src="images/Quinta 6.jpg" alt="Imagen 6" class="thumbnail" data-full="images/Quinta 6.jpg">
+                        <img src="images/Quinta 7.jpg" alt="Imagen 7" class="thumbnail" data-full="images/Quinta 7.jpg">
+                        <img src="images/Quinta 8.jpg" alt="Imagen 8" class="thumbnail" data-full="images/Quinta 8.jpg">
+                        <img src="images/Quinta 9.jpg" alt="Imagen 9" class="thumbnail" data-full="images/Quinta 9.jpg">
+                        <img src="images/Quinta 10.jpg" alt="Imagen 10" class="thumbnail" data-full="images/Quinta 10.jpg">
+                    </div>
+                    <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section class="section testimonios">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <p class="section-subtitle">Experiencias memorables en La Quinta</p>
+            
+            <div class="testimonios-slider">
+                <div class="testimonio active">
+                    <div class="testimonio-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Excelente lugar para celebrar nuestro aniversario. El espacio es amplio, las habitaciones muy cómodas y el personal super atento. ¡Volveremos sin duda!</p>
+                        <div class="testimonio-author">
+                            <div>
+                                <h4>María González</h4>
+                                <span>Boda, Enero 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonio">
+                    <div class="testimonio-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Organizamos el retiro de empresa aquí y fue perfecto. Tienen todo lo necesario para trabajar y relajarse. Los jardines son hermosos.</p>
+                        <div class="testimonio-author">
+                            <div>
+                                <h4>Carlos Rodríguez</h4>
+                                <span>Evento corporativo, Marzo 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonio">
+                    <div class="testimonio-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Celebramos los 15 de mi hija y fue mágico. El salón decorado, la iluminación, todo perfecto. Los invitados quedaron encantados con el lugar.</p>
+                        <div class="testimonio-author">
+                            <div>
+                                <h4>Laura Méndez</h4>
+                                <span>Fiesta de 15, Noviembre 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev-testimonio"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-btn next-testimonio"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa Section -->
+    <section class="section mapa">
+        <div class="container">
+            <h2 class="section-title">Ubicación</h2>
+            <p class="section-subtitle">Cómo llegar a nuestro establecimiento</p>
+            
+            <div class="mapa-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1189.4405301578563!2d-63.78769513228855!3d-22.461161498395374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x940f0fd11cfb9887%3A0x3431e2296b50b1d7!2sLa%20Quinta!5e1!3m2!1ses!2sar!4v1732565458560!5m2!1ses!2sar" 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <!-- Botones flotantes para móvil -->
+                <div class="mapa-mobile-buttons">
+                    <button class="mapa-toggle-btn" data-target="direccion">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </button>
+                    <button class="mapa-toggle-btn" data-target="estacionamiento">
+                        <i class="fas fa-car"></i>
+                    </button>
+                </div>
+                
+                <!-- Tarjetas de información -->
+                <div class="mapa-info">
+                    <div id="direccion" class="info-card mobile-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Dirección</h3>
+                        <p>Ruta Nacional 34, Km 1234, Tartagal, Salta, Argentina</p>
+                        <button class="close-card-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                    
+                    <div id="estacionamiento" class="info-card mobile-card">
+                        <i class="fas fa-car"></i>
+                        <h3>Estacionamiento</h3>
+                        <p>Amplio espacio de estacionamiento gratuito para tus invitados</p>
+                        <button class="close-card-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reserva Section -->
+    <section id="reserva" class="section reserva">
+        <div class="container">
+            <h2 class="section-title">Reservá tu estadía</h2>
+            <p class="section-subtitle">Consult disponibilidad para tu evento</p>
+            
+            <div class="reserva-container">
+                <div id="calendar"></div>
+                
+                <div class="reserva-info">
+                    <div class="info-box">
+                        <h3>Estado de disponibilidad</h3>
+                        <div class="disponibilidad-item">
+                            <span class="indicador disponible"></span>
+                            <p>Totalmente disponible</p>
+                        </div>
+                        <div class="disponibilidad-item">
+                            <span class="indicador parcial"></span>
+                            <p>Disponibilidad limitada</p>
+                        </div>
+                        <div class="disponibilidad-item">
+                            <span class="indicador ocupado"></span>
+                            <p>Reservado</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>¿Cómo reservar?</h3>
+                        <ol>
+                            <li>Consultá las fechas disponibles en el calendario</li>
+                            <li>Contactános para confirmar disponibilidad</li>
+                            <li>Realizá un depósito para asegurar tu fecha</li>
+                            <li>Recibí la confirmación de tu reserva</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="contacto-reserva">
+                        <h3>Contáctanos</h3>
+                        <p>Para consultas y reservas, comunicate con nosotros:</p>
+                        <div class="contacto-buttons">
+                            <a href="https://wa.me/5493873403228" class="btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="tel:+5493873403228" class="btn phone-btn">
+                                <i class="fas fa-phone"></i> Llamar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="section contacto">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-subtitle">Estamos aquí para ayudarte.</p>
+            
+            <div class="contacto-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn submit-btn">Enviar mensaje</button>
+                </form>
+                
+                <div class="contacto-info">
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <a href="mailto:info@laquinta.com">info@laquinta.com</a>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Teléfono</h3>
+                        <a href="tel:+5493873403228">+54 9 387 340-3228</a>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horario de atención</h3>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                        <p>Sábados: 10:00 - 14:00</p>
+                    </div>
+                    
+                    <div class="social-media">
+                        <a href="https://facebook.com" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5493873403228" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <h2>La Quinta Tartagal</h2>
+                        <p>Eventos & Hospedaje</p>
+                    </div>
+                    <p>El lugar perfecto para crear momentos inolvidables.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#reserva">Reservas</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ruta Nacional 34, Tartagal, Salta</li>
+                        <li><i class="fas fa-phone"></i> +54 9 387 340-3228</li>
+                        <li><i class="fas fa-envelope"></i> info@laquinta.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Suscribíte para recibir promociones especiales</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Quinta Tartagal.</p>
+                <div class="legal-links">
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos y condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <script src="js/scripthome.js"></script>
+</body>
+</html>
