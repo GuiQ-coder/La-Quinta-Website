@@ -1,0 +1,133 @@
+<!-- Sección Configuración -->
+<div id="configuracion-section" class="section-content">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Configuración General</h5>
+                </div>
+                <div class="card-body">
+                    <form id="configGeneralForm">
+                        <div class="mb-3">
+                            <label for="nombreEstablecimiento" class="form-label">Nombre del Establecimiento</label>
+                            <input type="text" class="form-control" id="nombreEstablecimiento">
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccionEstablecimiento" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="direccionEstablecimiento">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefonoEstablecimiento" class="form-label">Teléfono</label>
+                            <input type="text" class="form-control" id="telefonoEstablecimiento">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailEstablecimiento" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="emailEstablecimiento">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Copia de Seguridad</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-primary" id="btn-crear-backup">
+                            <i class="fas fa-database me-2"></i> Crear Copia de Seguridad
+                        </button>
+                        <button class="btn btn-outline-secondary" id="btn-restaurar-backup">
+                            <i class="fas fa-undo me-2"></i> Restaurar desde Copia
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Configuración de Reservas</h5>
+                </div>
+                <div class="card-body">
+                    <form id="configReservasForm">
+                        <div class="mb-3">
+                            <label for="horarioApertura" class="form-label">Horario de Apertura</label>
+                            <input type="time" class="form-control" id="horarioApertura">
+                        </div>
+                        <div class="mb-3">
+                            <label for="horarioCierre" class="form-label">Horario de Cierre</label>
+                            <input type="time" class="form-control" id="horarioCierre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="duracionMinima" class="form-label">Duración Mínima (horas)</label>
+                            <input type="number" class="form-control" id="duracionMinima" min="1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="anticipacionReserva" class="form-label">Anticipación Mínima (horas)</label>
+                            <input type="number" class="form-control" id="anticipacionReserva" min="1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Notificaciones</h5>
+                </div>
+                <div class="card-body">
+                    <form id="configNotificacionesForm">
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="notificacionesEmail">
+                            <label class="form-check-label" for="notificacionesEmail">Notificaciones por Email</label>
+                        </div>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="notificacionesReservas">
+                            <label class="form-check-label" for="notificacionesReservas">Alertas de nuevas reservas</label>
+                        </div>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="recordatoriosPago">
+                            <label class="form-check-label" for="recordatoriosPago">Recordatorios de pago</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Configuración de Facturación</h5>
+                </div>
+                <div class="card-body">
+                    <form id="configFacturacionForm">
+                        <div class="mb-3">
+                            <label for="iva" class="form-label">Porcentaje de IVA</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="iva" min="0" max="100" step="0.1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="prefijoFactura" class="form-label">Prefijo Factura</label>
+                            <input type="text" class="form-control" id="prefijoFactura">
+                        </div>
+                        <div class="mb-3">
+                            <label for="secuenciaFactura" class="form-label">Siguiente Número</label>
+                            <input type="number" class="form-control" id="secuenciaFactura" min="1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="diasVencimiento" class="form-label">Días para Vencimiento</label>
+                            <input type="number" class="form-control" id="diasVencimiento" min="1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

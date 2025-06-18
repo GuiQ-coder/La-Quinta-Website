@@ -1,0 +1,69 @@
+<!-- Sección Usuarios -->
+<div id="usuarios-section" class="section-content">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Gestión de Usuarios</h2>
+        <button class="btn btn-primary" id="btn-nuevo-usuario">
+            <i class="fas fa-plus me-1"></i> Nuevo Usuario
+        </button>
+    </div>
+    
+    <div class="card">
+        <div class="card-header bg-white">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar usuario..." id="buscar-usuario">
+                        <button class="btn btn-outline-secondary" type="button" id="btn-buscar-usuario">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group float-end">
+                        <select class="form-select form-select-sm" id="usuarios-filter">
+                            <option value="todos">Todos los usuarios</option>
+                            <option value="activos">Activos</option>
+                            <option value="inactivos">Inactivos</option>
+                            <option value="admin">Administradores</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover" id="tabla-usuarios">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Rol</th>
+                            <th>Estado</th>
+                            <th>Último acceso</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usuarios-list">
+                        <!-- Los usuarios se cargarán aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-between align-items-center mt-3">
+        <div class="form-group">
+            <select class="form-select form-select-sm" id="usuarios-per-page">
+                <option value="10">10 por página</option>
+                <option value="25">25 por página</option>
+                <option value="50">50 por página</option>
+                <option value="100">100 por página</option>
+            </select>
+        </div>
+        <nav>
+            <ul class="pagination pagination-sm" id="usuarios-pagination">
+                <!-- Paginación dinámica -->
+            </ul>
+        </nav>
+    </div>
+</div>

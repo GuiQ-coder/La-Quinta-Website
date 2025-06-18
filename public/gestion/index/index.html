@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Quinta - Panel de Gestión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="gestion-container">
+        <!-- Sidebar Container -->
+        <div id="sidebar-container">
+            <!-- El sidebar se cargará aquí dinámicamente -->
+        </div>
+        
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <!-- Barra Superior Container -->
+            <div id="topbar-container">
+                <!-- La barra superior se cargará aquí dinámicamente -->
+            </div>
+            
+            <!-- Contenedor de Secciones -->
+            <div class="sections-container">
+                <!-- Dashboard Section Container -->
+                <div id="dashboard-section-container">
+                    <div id="dashboard-section" class="section-content active">
+                        <!-- El contenido del dashboard se cargará aquí -->
+                    </div>
+                </div>
+                
+                <!-- Calendario Section Container -->
+                <div id="calendario-section-container">
+                    <div id="calendario-section" class="section-content">
+                        <!-- El contenido del calendario se cargará aquí -->
+                    </div>
+                </div>
+                
+                <!-- Reservas Section Container -->
+                <div id="reservas-section-container">
+                    <div id="reservas-section" class="section-content">
+                        <!-- El contenido de reservas se cargará aquí -->
+                    </div>
+                </div>
+                
+                <!-- Clientes Section Container -->
+                <div id="clientes-section-container">
+                    <div id="clientes-section" class="section-content">
+                        <!-- El contenido de clientes se cargará aquí -->
+                    </div>
+                </div>
+                
+                <!-- Facturación Section Container -->
+                <div id="facturacion-section-container">
+                    <div id="facturacion-section" class="section-content">
+                        <!-- El contenido de facturación se cargará aquí -->
+                    </div>
+                </div>
+                
+                <!-- Reportes Section Container -->
+                <div id="reportes-section-container">
+                    <div id="reportes-section" class="section-content">
+                        <!-- El contenido de reportes se cargará aquí -->
+                    </div>
+                </div>
+                
+                <!-- Usuarios Section Container -->
+                <div id="usuarios-section-container">
+                    <div id="usuarios-section" class="section-content">
+                        <!-- El contenido de usuarios se cargará aquí -->
+                    </div>
+                </div>
+                
+                <!-- Configuración Section Container -->
+                <div id="configuracion-section-container">
+                    <div id="configuracion-section" class="section-content">
+                        <!-- El contenido de configuración se cargará aquí -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Contenedor de Modales -->
+    <div id="modals-container">
+        <!-- Los modales se cargarán aquí dinámicamente -->
+    </div>
+
+    <!-- Contenedor de Toasts -->
+    <div id="toast-container" class="toast-container position-fixed top-0 end-0 p-3">
+        <!-- Los toasts se mostrarán aquí -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Scripts de la aplicación -->
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/components/ComponentManager.js"></script>
+    
+    <!-- Managers por sección -->
+    <script src="js/managers/DashboardManager.js"></script>
+    <script src="js/managers/CalendarioManager.js"></script>
+    <script src="js/managers/ReservasManager.js"></script>
+    <script src="js/managers/ClientesManager.js"></script>
+    <script src="js/managers/FacturacionManager.js"></script>
+    <script src="js/managers/ReportesManager.js"></script>
+    <script src="js/managers/UsuariosManager.js"></script>
+    <script src="js/managers/ConfiguracionManager.js"></script>
+    
+    <!-- CSS adicional para el loader -->
+    <style>
+        .loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .loader-spinner {
+            text-align: center;
+        }
+        
+        .section-content {
+            display: none;
+        }
+        
+        .section-content.active {
+            display: block;
+        }
+        
+        .sections-container > div {
+            height: 100%;
+        }
+        
+        /* Estilos para mobile */
+        @media (max-width: 768px) {
+            .sidebar.collapsed {
+                transform: translateX(-100%);
+            }
+            
+            .sidebar-toggle {
+                display: block;
+            }
+        }
+    </style>
+</body>
+</html>

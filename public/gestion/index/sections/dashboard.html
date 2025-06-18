@@ -1,0 +1,90 @@
+<div id="dashboard-section" class="section-content active">
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card dashboard-card">
+                <i class="fas fa-calendar-check"></i>
+                <div class="number" id="reservations-count">0</div>
+                <div class="label">Reservas este mes</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card dashboard-card">
+                <i class="fas fa-money-bill-wave"></i>
+                <div class="number" id="monthly-income">$0</div>
+                <div class="label">Ingresos mensuales</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card dashboard-card">
+                <i class="fas fa-bed"></i>
+                <div class="number" id="occupancy-rate">0%</div>
+                <div class="label">Ocupación</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card dashboard-card">
+                <i class="fas fa-user-clock"></i>
+                <div class="number" id="pending-reservations">0</div>
+                <div class="label">Reservas pendientes</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-7">
+            <div class="calendar-container mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3>Calendario de Disponibilidad</h3>
+                    <button class="btn btn-primary" id="btn-nueva-reserva-dashboard">
+                        <i class="fas fa-plus me-1"></i> Nueva Reserva
+                    </button>
+                </div>
+                <div id="calendar"></div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Próximas Reservas</h5>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Ver todas</a>
+                </div>
+                <div class="card-body p-0">
+                    <div class="list-group list-group-flush" id="proximas-reservas-list">
+                        <!-- Las reservas se cargarán aquí dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-5">
+            <div class="card mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Facturación Reciente</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group" id="facturas-recientes-list">
+                        <!-- Las facturas se cargarán aquí dinámicamente -->
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-sm btn-outline-primary">
+                            <i class="fas fa-file-invoice-dollar me-1"></i> Ver todas las facturas
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Usuarios del Sistema</h5>
+                    <button class="btn btn-sm btn-primary" id="btn-nuevo-usuario">
+                        <i class="fas fa-plus me-1"></i> Nuevo Usuario
+                    </button>
+                </div>
+                <div class="card-body p-0">
+                    <div class="list-group list-group-flush" id="usuarios-list">
+                        <!-- Los usuarios se cargarán aquí dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

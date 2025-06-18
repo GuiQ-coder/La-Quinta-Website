@@ -1,0 +1,41 @@
+<div id="calendario-section" class="section-content">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="d-inline-block me-3">Calendario</h2>
+            <span id="current-month-year" class="text-center"></span>
+        </div>
+        <div>
+            <button class="btn btn-outline-secondary" id="prev-month">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="btn btn-outline-primary mx-2" id="current-month">
+                Hoy
+            </button>
+            <button class="btn btn-outline-secondary" id="next-month">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <button class="btn btn-primary ms-3" id="btn-nueva-reserva-calendario">
+                <i class="fas fa-plus me-1"></i> Nueva Reserva
+            </button>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body p-0">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <div class="calendar-day-name">Dom</div>
+                    <div class="calendar-day-name">Lun</div>
+                    <div class="calendar-day-name">Mar</div>
+                    <div class="calendar-day-name">Mié</div>
+                    <div class="calendar-day-name">Jue</div>
+                    <div class="calendar-day-name">Vie</div>
+                    <div class="calendar-day-name">Sáb</div>
+                </div>
+                <div class="calendar-grid" id="calendar-grid">
+                    <!-- Días se generan dinámicamente con JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

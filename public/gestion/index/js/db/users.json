@@ -1,0 +1,9 @@
+{
+    
+            "name": "Administrador",
+            "email": "admin@laquinta.com",
+            "password": "hash",
+            "salt": "salt",
+            "role": "superadmin",
+            "createdAt": "new Date().toISOString()"
+}

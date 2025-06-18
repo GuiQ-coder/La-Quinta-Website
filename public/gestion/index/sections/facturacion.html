@@ -1,0 +1,101 @@
+<!-- Sección Facturación -->
+<div id="facturacion-section" class="section-content">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Gestión de Facturación</h2>
+        <div>
+            <button class="btn btn-primary me-2" id="btn-nueva-factura">
+                <i class="fas fa-plus me-1"></i> Nueva Factura
+            </button>
+            <button class="btn btn-outline-secondary" id="btn-generar-reporte">
+                <i class="fas fa-file-pdf me-1"></i> Generar Reporte
+            </button>
+        </div>
+    </div>
+    
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card dashboard-card">
+                <i class="fas fa-money-bill-wave"></i>
+                <div class="number" id="facturacion-mes">$0</div>
+                <div class="label">Facturación del mes</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card dashboard-card">
+                <i class="fas fa-file-invoice"></i>
+                <div class="number" id="facturas-emitidas">0</div>
+                <div class="label">Facturas emitidas</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card dashboard-card">
+                <i class="fas fa-check-circle"></i>
+                <div class="number" id="facturas-pagadas">0</div>
+                <div class="label">Pagadas</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card dashboard-card">
+                <i class="fas fa-exclamation-circle"></i>
+                <div class="number" id="facturas-pendientes">0</div>
+                <div class="label">Pendientes</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header bg-white">
+            <ul class="nav nav-tabs card-header-tabs" id="facturasTabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" data-status="todas">Todas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-status="pagadas">Pagadas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-status="pendientes">Pendientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-status="vencidas">Vencidas</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover" id="tabla-facturas">
+                    <thead>
+                        <tr>
+                            <th>Número</th>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>Concepto</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                            <th>Vencimiento</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="facturas-list">
+                        <!-- Las facturas se cargarán aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-between align-items-center mt-3">
+        <div class="form-group">
+            <select class="form-select form-select-sm" id="facturas-per-page">
+                <option value="10">10 por página</option>
+                <option value="25">25 por página</option>
+                <option value="50">50 por página</option>
+                <option value="100">100 por página</option>
+            </select>
+        </div>
+        <nav>
+            <ul class="pagination pagination-sm" id="facturas-pagination">
+                <!-- Paginación dinámica -->
+            </ul>
+        </nav>
+    </div>
+</div>
